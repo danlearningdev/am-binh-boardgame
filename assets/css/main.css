@@ -159,6 +159,39 @@ textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+.menu-navbar a {
+  font-size: 1.1em;
+  color: #333;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-navbar a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.menu-navbar a:hover {
+  color: #e84118;
+  transform: scale(1.05);
+}
+
+.menu-navbar a:hover::before {
+  width: 80%;
+}
+
 
 /* Basic */
 
