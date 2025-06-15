@@ -159,37 +159,38 @@ textarea {
 	-ms-appearance: none;
 	appearance: none;
 }
+
 .menu-navbar a {
-  font-size: 1.1em;
-  color: #333;
-  text-decoration: none;
-  padding: 0.5em 1em;
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-  transition: color 0.3s ease, transform 0.3s ease;
+	font-size: 1.1em;
+	color: #333;
+	text-decoration: none;
+	padding: 0.5em 1em;
+	border-radius: 8px;
+	position: relative;
+	overflow: hidden;
+	transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .menu-navbar a::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0%;
-  height: 3px;
-  background: linear-gradient(to right, #ff512f, #dd2476);
-  transition: all 0.4s ease;
-  transform: translateX(-50%);
-  border-radius: 2px;
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0%;
+	height: 3px;
+	background: linear-gradient(to right, #ff512f, #dd2476);
+	transition: all 0.4s ease;
+	transform: translateX(-50%);
+	border-radius: 2px;
 }
 
 .menu-navbar a:hover {
-  color: #e84118;
-  transform: scale(1.05);
+	color: #e84118;
+	transform: scale(1.05);
 }
 
 .menu-navbar a:hover::before {
-  width: 80%;
+	width: 80%;
 }
 
 
@@ -547,6 +548,46 @@ body.is-preload *:after {
 body {
 	text-decoration: none;
 }
+
+/* Game Info */
+.game-info {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 1.2em;
+	flex-wrap: wrap;
+}
+
+.info-box {
+	background: rgba(255, 255, 255, 0.08);
+	padding: 1em 1.5em;
+	border-radius: 12px;
+	font-size: 1.1em;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	font-weight: 500;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+	transition: all 0.3s ease-in-out;
+	cursor: default;
+}
+
+.info-box:hover {
+	background: rgba(255, 255, 255, 0.15);
+	transform: scale(1.05) translateY(-2px);
+	box-shadow: 0 10px 25px rgba(255, 165, 0, 0.3);
+}
+
+.info-box:active {
+	transform: scale(0.98);
+	box-shadow: 0 4px 8px rgba(255, 85, 0, 0.2);
+}
+
+.info-box .icon {
+	font-size: 1.4em;
+}
+
 
 body:before {
 	-moz-animation: spinner-show 1.5s 1 0.25s ease forwards, spinner-hide 0.25s ease-in-out forwards !important;
@@ -1591,7 +1632,8 @@ body.is-touch .poptrox-popup .closer {
 	width: 50%;
 	position: relative;
 	opacity: 1.0;
-	padding: 10px; /* thêm khoảng cách giữa các item */
+	padding: 10px;
+	/* thêm khoảng cách giữa các item */
 	box-sizing: border-box;
 }
 
@@ -1600,7 +1642,8 @@ body.is-touch .poptrox-popup .closer {
 	position: relative;
 	overflow: hidden;
 	border-radius: 12px;
-	box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.3); /* bóng mặc định */
+	box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.3);
+	/* bóng mặc định */
 	transition: all 0.4s ease;
 	transform-origin: center;
 }
@@ -2454,60 +2497,60 @@ body.is-touch .main {
 
 /* Phần khung tổng */
 .contact-form {
-  background: #ffffff;
-  padding: 2.5em;
-  border-radius: 1rem;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-  max-width: 800px;
-  margin: 0 auto;
+	background: #ffffff;
+	padding: 2.5em;
+	border-radius: 1rem;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-in-out;
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 /* Trường nhập liệu */
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-  width: 100%;
-  padding: 0.9em 1.2em;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  font-size: 1em;
-  background-color: #f9f9f9;
-  transition: border 0.3s, background 0.3s;
-  font-family: "Epilogue", sans-serif;
+	width: 100%;
+	padding: 0.9em 1.2em;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	font-size: 1em;
+	background-color: #f9f9f9;
+	transition: border 0.3s, background 0.3s;
+	font-family: "Epilogue", sans-serif;
 }
 
 .contact-form input[type="text"]:focus,
 .contact-form input[type="email"]:focus,
 .contact-form textarea:focus {
-  border-color: #ff5500;
-  background-color: #fff;
-  outline: none;
+	border-color: #ff5500;
+	background-color: #fff;
+	outline: none;
 }
 
 .contact-form .submit-button {
-  background-color: #ff5500;
-  color: white;
-  padding: 0.75em 2em;
-  border: none;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 1.1em;
-  cursor: pointer;
-  font-family: "Epilogue", sans-serif;
-  transition: background 0.3s ease, transform 0.2s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 1;
-  height: 3em;
+	background-color: #ff5500;
+	color: white;
+	padding: 0.75em 2em;
+	border: none;
+	border-radius: 50px;
+	font-weight: bold;
+	font-size: 1.1em;
+	cursor: pointer;
+	font-family: "Epilogue", sans-serif;
+	transition: background 0.3s ease, transform 0.2s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1;
+	height: 3em;
 }
 
 
 .contact-form .submit-button:hover {
-  background-color: #ff3300;
-  transform: scale(1.05);
-  box-shadow: 0 5px 20px rgba(255, 85, 0, 0.4);
+	background-color: #ff3300;
+	transform: scale(1.05);
+	box-shadow: 0 5px 20px rgba(255, 85, 0, 0.4);
 }
 
 
